@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-08-30T10:04:38.780Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" etag="_pAJm_qGI7ALzaJUuwYv" version="15.0.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-30T11:02:45.357Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" etag="lPN14AvbXZqM_8lgA4JT" version="15.0.3" type="github">
   <diagram id="OfNVzm3rV_Hb3D0oMhvH" name="Page-1">
-    <mxGraphModel dx="462" dy="1449" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1234" dy="1634" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -156,7 +156,7 @@
           <mxGeometry x="338.49" y="1120" width="160" height="20" as="geometry" />
         </mxCell>
         <mxCell id="IhRU6DyNc9BIXhvknG6n-54" value="webpack.config.js" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="338.49" y="1140" width="160" height="20" as="geometry" />
+          <mxGeometry x="338.49" y="1142" width="160" height="20" as="geometry" />
         </mxCell>
         <mxCell id="IhRU6DyNc9BIXhvknG6n-55" value="cart" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="563.49" y="1020" width="160" height="20" as="geometry" />
@@ -473,8 +473,8 @@
         <mxCell id="IhRU6DyNc9BIXhvknG6n-189" value="&lt;h1&gt;Page 9&lt;/h1&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;verticalAlign=middle;fontStyle=4;fontColor=#333333;" parent="1" vertex="1">
           <mxGeometry x="720" y="2450" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="378rq_pBnACFfX3dS7jl-1" value="&lt;h1&gt;&lt;span style=&quot;font-size: 16px; background-color: rgb(255, 255, 255);&quot;&gt;&quot;&lt;/span&gt;&lt;em style=&quot;box-sizing: border-box; font-size: 16px; background-color: rgb(255, 255, 255);&quot;&gt;Assalamualaikum warahmatullahi wabarakatuh&lt;/em&gt;&lt;span style=&quot;font-size: 16px; background-color: rgb(255, 255, 255);&quot;&gt;, selamat malam, salam sejahtera untuk kita semua, Om Swastyastu, Namo Buddhaya, salam kebajikan,&quot;&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="330" y="-130" width="330" height="120" as="geometry" />
+        <mxCell id="378rq_pBnACFfX3dS7jl-1" value="&lt;h1&gt;&lt;span style=&quot;font-size: 16px ; background-color: rgb(255 , 255 , 255)&quot;&gt;&quot;&lt;/span&gt;&lt;em style=&quot;box-sizing: border-box ; font-size: 16px ; background-color: rgb(255 , 255 , 255)&quot;&gt;Assalamualaikum warahmatullahi wabarakatuh&lt;/em&gt;&lt;span style=&quot;font-size: 16px ; background-color: rgb(255 , 255 , 255)&quot;&gt;, selamat sore, salam sejahtera untuk kita semua, Om Swastyastu, Namo Buddhaya, salam kebajikan,&quot;&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="240" y="-507" width="330" height="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
