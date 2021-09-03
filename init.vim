@@ -15,6 +15,12 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" ============================================================
+" Highlighter 
+" ============================================================
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
+
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 
@@ -51,7 +57,7 @@ let g:autocomplete_flow#insert_paren_after_function = 0
 " ============================================================
 " Theme
 " ============================================================
-let g:airline_theme='simple' " <theme> is a valid theme name
+let g:airline_theme='simple'" <theme> is a valid theme name
 
 " ============================================================
 " Neoformat
@@ -132,3 +138,8 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+
+:set number
+inoremap jk <Esc>
+
+let g:python3_host_prog = '/usr/bin/python'
