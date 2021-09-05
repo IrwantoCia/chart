@@ -2,7 +2,13 @@ call plug#begin('~/.vim/plugged')
 " ============================================================
 " Deoplete
 " ============================================================
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+if has('nvim')
+	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+	Plug 'Shougo/deoplete.nvim'
+	Plug 'roxma/nvim-yarp'
+	Plug 'roxma/vim-hug-neovim-rpc'
+endif
 Plug 'zchee/deoplete-jedi'
 Plug 'wokalski/autocomplete-flow'
 " For func argument completion
@@ -16,7 +22,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " ============================================================
-" Highlighter 
+" Highlighter
 " ============================================================
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -30,7 +36,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'neomake/neomake'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'machakann/vim-highlightedyank'
-Plug 'tmhedberg/SimpylFold'
+" Plug 'tmhedberg/SimpylFold'
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -43,6 +49,7 @@ call plug#end()
 " ============================================================
 " For python need to install pynvim and jedi
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#jedi#python_path = 'python3'
 
 " Automatically close the method preview window
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
@@ -57,7 +64,7 @@ let g:autocomplete_flow#insert_paren_after_function = 0
 " ============================================================
 " Theme
 " ============================================================
-let g:airline_theme='simple'" <theme> is a valid theme name
+let g:airline_theme='google_dark' " <theme> is a valid theme name
 
 " ============================================================
 " Neoformat
@@ -79,8 +86,8 @@ let g:neoformat_basic_format_retab = 1
 let g:neoformat_basic_format_trim = 1
 
 augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
+	autocmd!
+	autocmd BufWritePre * undojoin | Neoformat
 augroup END
 
 
@@ -92,7 +99,7 @@ let g:jedi#completions_enabled = 0
 
 " open the go-to function in split, not another buffer
 let g:jedi#use_splits_not_buffers = "right"
-
+let g:jedi#enviroment_path = '/usr/bin/python3'
 " ============================================================
 " Neomake
 " ============================================================
@@ -120,11 +127,23 @@ set background=dark " use dark mode
 " ============================================================
 nnoremap <C-p> :FZF<CR>
 let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit'
-  \}
+			\ 'ctrl-t': 'tab split',
+			\ 'ctrl-s': 'split',
+			\ 'ctrl-v': 'vsplit'
+			\}
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+
+" ============================================================
+" simpylfold
+" <Leader>c<space> to toggle between line comment and uncomment
+" ============================================================
+" let g:SimpylFold_fold_docstring = 0
+" let g:SimpylFold_fold_import = 0
+
+" ============================================================
+" Deoplete
+" ============================================================
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
 
 " ============================================================
 " Others
@@ -140,6 +159,6 @@ nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
 :set number
-inoremap jk <Esc>
+imap jk <Esc>
 
-let g:python3_host_prog = '/usr/bin/python'
+let mapleader = ','
