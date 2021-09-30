@@ -34,6 +34,8 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'preservim/nerdtree'
+" see https://github.com/a-vrma/black-nvim for how to connect venv
+Plug 'Chiel92/vim-autoformat'
 call plug#end()
 
 colorscheme gruvbox
@@ -86,7 +88,18 @@ nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
+" npm i -g vscode-langservers-extracted
+" npm install -g @tailwindcss/language-server
+
 lua << EOF
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+require'lspconfig'.cssls.setup {
+  capabilities = capabilities,
+}
+
+require'lspconfig'.tailwindcss.setup{}
 require'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach} 
 require'lspconfig'.tsserver.setup{on_attach=require'completion'.on_attach} 
 require'nvim-treesitter.configs'.setup {highlight = {enable = true}}
@@ -94,3 +107,11 @@ require('telescope').setup{ defaults = { file_ignore_patterns = {"node_modules"}
 EOF
 
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+
+let g:python3_host_prog = $HOME . '/.local/venv/nvim/bin/python'
+au BufWrite * :Autoformat
+" Disable fallback
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 0
+
