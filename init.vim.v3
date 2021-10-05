@@ -67,6 +67,7 @@ let mapleader = " "
 nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
 nnoremap <C-p> :lua require('telescope.builtin').find_files()<cr>
 nnoremap <C-Tab> :bprevious<CR>
+nnoremap <S-Tab> :bnext<CR>
 nnoremap py :w \| :!python %<CR>
 
 nnoremap Y y$
